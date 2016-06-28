@@ -2,6 +2,16 @@
 
 *How To Use*
 
+Make a file named `.eslintrc` with following contents:
+```json
+{
+  "extends": "smartprix",
+  "rules": {
+  }
+}
+```
+
+Now run:
 ```bash
 npm install --save-dev eslint babel-eslint eslint-plugin-babel eslint-plugin-import eslint-config-smartprix
 # Now you can run eslint on src folder using
