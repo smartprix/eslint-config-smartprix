@@ -25,6 +25,9 @@ module.exports = {
 		'no-cond-assign': ['error', 'except-parens'],
 		'no-underscore-dangle': 0,
 		'no-plusplus': 0,
+		'no-tabs': 0,
+		'no-bitwise': 0,
+		'no-continue': 0,
 		'operator-linebreak': ['error', 'after'],
 
 		'max-nested-callbacks': ['warn', 3],
