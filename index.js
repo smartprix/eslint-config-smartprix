@@ -68,9 +68,8 @@ module.exports = {
 
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
-	},
-
-	settings: {
-		'import/extensions': ['.js', '.jsx', '.json', '.vue'],
+		
+		// doesn't work properly with webpack
+		'import/no-unresolved': 0,
 	},
 };
