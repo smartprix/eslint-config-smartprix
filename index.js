@@ -68,8 +68,14 @@ module.exports = {
 
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
-		
+
 		// doesn't work properly with webpack
 		'import/no-unresolved': 0,
+
+		// allow debugger during development
+    	'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 0,
+
+    	// allow console during development
+    	'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 0,
 	},
 };
