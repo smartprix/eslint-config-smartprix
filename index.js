@@ -5,12 +5,23 @@ module.exports = {
 
 	parser: 'babel-eslint',
 	plugins: [
-		'babel'
+		'babel',
+		'html',
 	],
 
 	parserOptions: {
 		ecmaVersion: 2016,
 		sourceType: 'module',
+		ecmaFeatures: {
+			jsx: true
+		},
+	},
+
+	env: {
+		browser: true,
+		node: true,
+		commonjs: true,
+		jquery: true,
 	},
 	
 	rules: {
