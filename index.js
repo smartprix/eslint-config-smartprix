@@ -3,7 +3,7 @@ module.exports = {
 		'eslint-config-airbnb-base'
 	].map(require.resolve),
 
-	parser: 'babel-eslint',
+	parser: require.resolve('babel-eslint'),
 	plugins: [
 		'babel',
 		'html',
@@ -65,5 +65,8 @@ module.exports = {
 		'babel/new-cap': 0,
 		'babel/object-curly-spacing': 0,
 		'babel/object-shorthand': 0,
+
+		'import/max-dependencies': 0,
+		'import/no-absolute-path': 0,
 	}
 };

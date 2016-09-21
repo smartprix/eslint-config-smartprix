@@ -28,16 +28,19 @@
   },
   "homepage": "https://github.com/smartprix/js_conventions",
   "devDependencies": {
-    "eslint": "3.4.0",
-    "eslint-find-rules": "1.13.1"
+    "eslint": "3.5.0",
+    "eslint-find-rules": "1.13.2",
+    "eslint-plugin-babel": "3.3.0",
+    "eslint-plugin-html": "1.5.2",
+    "eslint-plugin-import": "1.15.0"
   },
   "peerDependencies": {
-    "eslint": ">= 3.3.0"
+    "eslint": ">= 3.3.0",
+    "eslint-plugin-babel": ">= 3.3.0",
+    "eslint-plugin-html": ">= 1.5.2"
   },
   "dependencies": {
     "babel-eslint": "6.1.2",
-    "eslint-config-airbnb-base": "7.0.0",
-    "eslint-plugin-babel": "3.3.0",
-    "eslint-plugin-import": "1.14.0"
+    "eslint-config-airbnb-base": "7.1.0"
   }
 }
