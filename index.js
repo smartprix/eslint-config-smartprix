@@ -68,5 +68,6 @@ module.exports = {
 
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
+		'import/extensions': ['.js', '.jsx', '.json', '.vue'],
 	}
 };
