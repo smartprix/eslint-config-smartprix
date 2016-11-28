@@ -32,6 +32,15 @@ module.exports = {
 		'brace-style': [2, 'stroustrup', {allowSingleLine: true}],
 		indent: [2, 'tab', {SwitchCase: 1, VariableDeclarator: 1}],
 
+		// require trailing commas in multiline object literals
+		'comma-dangle': ['error', {
+			arrays: 'always-multiline',
+			objects: 'always-multiline',
+			imports: 'always-multiline',
+			exports: 'always-multiline',
+			functions: 'ignore',
+		}],
+
 		'generator-star-spacing': ['error', {before: false, after: true}],
 		'func-names': 0,
 		'no-param-reassign': 0,
@@ -74,7 +83,7 @@ module.exports = {
 		'babel/new-cap': 0,
 		'babel/object-curly-spacing': 0,
 		'babel/object-shorthand': 0,
-		'babel/no-invalid-this': ['error'],
+		'babel/no-invalid-this': 0,
 
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
