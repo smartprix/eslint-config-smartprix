@@ -1,19 +1,23 @@
+require('./monkey_patch').addPlugins(['babel', 'html', 'import']);
+
 module.exports = {
 	extends: [
-		'eslint-config-airbnb-base'
+		'eslint-config-airbnb-base',
 	].map(require.resolve),
 
 	parser: require.resolve('babel-eslint'),
 	plugins: [
 		'babel',
 		'html',
+		'import',
 	],
 
 	parserOptions: {
-		ecmaVersion: 2016,
+		ecmaVersion: 2017,
 		sourceType: 'module',
 		ecmaFeatures: {
-			jsx: true
+			jsx: true,
+			experimentalObjectRestSpread: true,
 		},
 	},
 
@@ -23,12 +27,12 @@ module.exports = {
 		commonjs: true,
 		jquery: true,
 	},
-	
-	rules: {
-		'brace-style': [2, 'stroustrup', { allowSingleLine: true }],
-		'indent': [2, 'tab', { SwitchCase: 1, VariableDeclarator: 1 }],
 
-		'generator-star-spacing': 0,
+	rules: {
+		'brace-style': [2, 'stroustrup', {allowSingleLine: true}],
+		indent: [2, 'tab', {SwitchCase: 1, VariableDeclarator: 1}],
+
+		'generator-star-spacing': ['error', {before: false, after: true}],
 		'func-names': 0,
 		'no-param-reassign': 0,
 		'object-curly-spacing': ['error', 'never'],
@@ -39,23 +43,28 @@ module.exports = {
 		'no-tabs': 0,
 		'no-bitwise': 0,
 		'no-continue': 0,
+		'no-return-await': ['error'],
+		'require-await': 0,
 		'operator-linebreak': ['error', 'after'],
+
+		'capitalized-comments': 0,
+
 
 		'max-nested-callbacks': ['warn', 3],
 		'max-depth': ['warn', 4],
 		'max-statements': ['warn', 40],
 		'max-params': ['warn', 5],
-		'complexity': ['warn', 20],
+		complexity: ['warn', 20],
 		'consistent-this': ['warn', 'self'],
 		'max-lines': ['warn', {
 			max: 300,
 			skipBlankLines: true,
-			skipComments: true
+			skipComments: true,
 		}],
-		'max-statements-per-line': ['warn', { max: 2 }],
-		//'no-negated-condition': 'warn',
+		'max-statements-per-line': ['warn', {max: 2}],
+		// 'no-negated-condition': 'warn',
 
-		'babel/generator-star-spacing': ['error', {'before': false, 'after': true}],
+		'babel/generator-star-spacing': 0,
 		'babel/no-await-in-loop': 1,
 
 		'babel/array-bracket-spacing': 0,
@@ -65,6 +74,7 @@ module.exports = {
 		'babel/new-cap': 0,
 		'babel/object-curly-spacing': 0,
 		'babel/object-shorthand': 0,
+		'babel/no-invalid-this': ['error'],
 
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
@@ -73,9 +83,9 @@ module.exports = {
 		'import/no-unresolved': 0,
 
 		// allow debugger during development
-    	'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 0,
+		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 0,
 
-    	// allow console during development
-    	'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 0,
+		// allow console during development
+		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 0,
 	},
 };
