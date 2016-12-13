@@ -75,7 +75,7 @@ module.exports = {
 		// 'no-negated-condition': 'warn',
 
 		'babel/generator-star-spacing': 0,
-		'babel/no-await-in-loop': 1,
+		'babel/no-await-in-loop': 0,
 
 		'babel/array-bracket-spacing': 0,
 		'babel/arrow-parens': 0,
