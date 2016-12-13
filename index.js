@@ -57,7 +57,8 @@ module.exports = {
 		'operator-linebreak': ['error', 'after'],
 
 		'capitalized-comments': 0,
-
+		'no-restricted-syntax': ['error', 'WithStatement'],
+		'semi': ['error', 'always', {omitLastInOneLineBlock: true}],
 
 		'max-nested-callbacks': ['warn', 3],
 		'max-depth': ['warn', 4],
