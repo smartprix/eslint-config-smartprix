@@ -91,6 +91,12 @@ module.exports = {
 
 		// doesn't work properly with webpack
 		'import/no-unresolved': 0,
+		'import/extensions': ['error', 'always', {
+			js: 'never',
+			jsx: 'never',
+			json: 'never',
+			vue: 'never',
+		}],
 
 		// allow debugger during development
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 0,
