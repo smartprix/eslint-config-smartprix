@@ -28,6 +28,14 @@ module.exports = {
 		jquery: true,
 	},
 
+	globals: {
+		d: false,
+		_: false,
+		moment: false,
+		cfg: false,
+		sm: false,
+	},
+
 	rules: {
 		'brace-style': [2, 'stroustrup', {allowSingleLine: true}],
 		indent: [2, 'tab', {SwitchCase: 1, VariableDeclarator: 1}],
