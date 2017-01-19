@@ -105,6 +105,6 @@ module.exports = {
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 0,
 
 		// allow console during development
-		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 0,
+		'no-console': 0,
 	},
 };
