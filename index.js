@@ -81,6 +81,20 @@ module.exports = {
 		}],
 		'max-statements-per-line': ['warn', {max: 2}],
 		// 'no-negated-condition': 'warn',
+		
+		// new rules in 4.0.0
+		'array-bracket-newline': ['error', {multiline: true }],
+		'array-element-newline': 0,
+		'for-direction': 0,
+		'no-buffer-constructor': ['error'],
+		'semi-style': ['error', 'last'],
+		'switch-colon-spacing': ['error', {after: true, before: false}],
+
+		// this is an important rule
+		// but ignoring for now because slightly complicated
+		// come back to it later
+		'padding-line-between-statements': 0,
+
 
 		'babel/generator-star-spacing': 0,
 		'babel/no-await-in-loop': 0,
@@ -94,8 +108,19 @@ module.exports = {
 		'babel/object-shorthand': 0,
 		'babel/no-invalid-this': 0,
 
+		'babel/semi': 1,
+
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
+
+		'import/no-anonymous-default-export': ["error", {
+			allowArray: true,
+			allowArrowFunction: false,
+			allowAnonymousClass: false,
+			allowAnonymousFunction: false,
+			allowLiteral: true,
+			allowObject: true,
+		}],
 
 		// doesn't work properly with webpack
 		'import/no-unresolved': 0,
