@@ -109,7 +109,7 @@ module.exports = {
 		'babel/object-shorthand': 0,
 		'babel/no-invalid-this': 0,
 
-		'babel/semi': 1,
+		'babel/semi': 0,
 
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
