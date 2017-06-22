@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-smartprix",
-  "version": "3.2.3",
+  "version": "3.2.4",
   "description": "Base JS ESLint config used by Smartprix",
   "main": "index.js",
   "scripts": {
