@@ -83,7 +83,8 @@ module.exports = {
 		// 'no-negated-condition': 'warn',
 		
 		// new rules in 4.0.0
-		'array-bracket-newline': ['error', {multiline: true }],
+		// 'array-bracket-newline': ['error', {multiline: true }],  // doesn't handle comments so disable
+		'array-bracket-newline': 0,
 		'array-element-newline': 0,
 		'for-direction': 0,
 		'no-buffer-constructor': ['error'],
