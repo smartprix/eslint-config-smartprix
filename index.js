@@ -115,7 +115,7 @@ module.exports = {
 
 		'import/no-anonymous-default-export': ["error", {
 			allowArray: true,
-			allowArrowFunction: false,
+			allowArrowFunction: true,
 			allowAnonymousClass: false,
 			allowAnonymousFunction: false,
 			allowLiteral: true,
