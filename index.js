@@ -97,6 +97,18 @@ module.exports = {
 		// come back to it later
 		'padding-line-between-statements': 0,
 
+		// can't break one parameter into newline, so disable for now
+		'function-paren-newline': 0,
+
+		// an important rule, but can be confusing at time, so disable for now
+		'prefer-destructuring': 0,
+
+		// change min properties from 4 to 5 in airbnb rule
+		'object-curly-newline': ['error', {
+			ObjectExpression: { minProperties: 5, multiline: true, consistent: true },
+			ObjectPattern: { minProperties: 5, multiline: true, consistent: true }
+		}],
+
 
 		'babel/generator-star-spacing': 0,
 		'babel/no-await-in-loop': 0,
