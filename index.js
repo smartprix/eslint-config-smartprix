@@ -66,7 +66,7 @@ module.exports = {
 
 		'capitalized-comments': 0,
 		'no-restricted-syntax': ['error', 'WithStatement'],
-		'semi': ['error', 'always', {omitLastInOneLineBlock: true}],
+		semi: ['error', 'always', {omitLastInOneLineBlock: true}],
 
 		'max-nested-callbacks': ['warn', 3],
 		'max-depth': ['warn', 4],
@@ -81,9 +81,10 @@ module.exports = {
 		}],
 		'max-statements-per-line': ['warn', {max: 2}],
 		// 'no-negated-condition': 'warn',
-		
+
 		// new rules in 4.0.0
-		// 'array-bracket-newline': ['error', {multiline: true }],  // doesn't handle comments so disable
+		// disabling it because it doesn't handle comments so disable
+		// 'array-bracket-newline': ['error', {multiline: true }],
 		'array-bracket-newline': 0,
 		'array-element-newline': 0,
 		'for-direction': 0,
@@ -114,7 +115,7 @@ module.exports = {
 		'import/max-dependencies': 0,
 		'import/no-absolute-path': 0,
 
-		'import/no-anonymous-default-export': ["error", {
+		'import/no-anonymous-default-export': ['error', {
 			allowArray: true,
 			allowArrowFunction: true,
 			allowAnonymousClass: false,
