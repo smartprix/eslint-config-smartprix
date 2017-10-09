@@ -1,18 +1,24 @@
-require('./monkey_patch').addPlugins(['babel', 'html', 'import']);
+require('./monkey_patch').addPlugins(['babel', 'html', 'import', 'vue']);
 
 module.exports = {
 	extends: [
 		'eslint-config-airbnb-base',
+		'eslint-plugin-vue/lib/config/recommended',
 	].map(require.resolve),
 
-	parser: require.resolve('babel-eslint'),
 	plugins: [
 		'babel',
+		'vue',
 		'html',
 		'import',
 	],
 
+	settings: {
+		'html/html-extensions': ['.html', '.we'], // consider .html and .we files as HTML
+	},
+
 	parserOptions: {
+		parser: require.resolve('babel-eslint'),
 		ecmaVersion: 2017,
 		sourceType: 'module',
 		ecmaFeatures: {
@@ -105,8 +111,8 @@ module.exports = {
 
 		// change min properties from 4 to 5 in airbnb rule
 		'object-curly-newline': ['error', {
-			ObjectExpression: { minProperties: 5, multiline: true, consistent: true },
-			ObjectPattern: { minProperties: 5, multiline: true, consistent: true }
+			ObjectExpression: {minProperties: 5, multiline: true, consistent: true},
+			ObjectPattern: {minProperties: 5, multiline: true, consistent: true},
 		}],
 
 
@@ -145,5 +151,34 @@ module.exports = {
 
 		// allow console during development
 		'no-console': 0,
+
+		// vue related options
+		'vue/no-dupe-keys': ['error'],
+		'vue/no-shared-component-data': ['error'],
+		'vue/require-render-return': ['error'],
+		'vue/require-valid-default-prop': ['error'],
+		'vue/return-in-computed-property': [2, {
+			treatUndefinedAsUnspecified: true,
+		}],
+		'vue/no-async-in-computed-properties': ['error'],
+		'vue/no-duplicate-attributes': ['error', {
+			allowCoexistClass: true, // default: true
+			allowCoexistStyle: true, // default: true
+		}],
+		'vue/this-in-template': ['error', 'never'],
+		'vue/html-quotes': ['error', 'double'],
+		'vue/attribute-hyphenation': ['error', 'always'],
+		'vue/max-attributes-per-line': ['error', {
+			singleline: 3,
+			multiline: {
+				max: 1,
+				allowFirstLine: false,
+			},
+		}],
+		'vue/mustache-interpolation-spacing': ['error', 'always'],
+		'vue/name-property-casing': ['error', 'PascalCase'],
+		'vue/no-multi-spaces': ['error'],
+		'vue/v-bind-style': ['error', 'shorthand'],
+		'vue/v-on-style': ['error', 'shorthand'],
 	},
 };
