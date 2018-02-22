@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "tests-only": "babel-tape-runner ./test/test-*.js",
-    "prepublish": "eslint-find-rules --unused && npm test",
-    "test": "true"
+    "test": "eslint-find-rules --unused"
   },
   "repository": {
     "type": "git",
