@@ -3,7 +3,7 @@ require('./monkey_patch').addPlugins(['babel', 'html', 'import', 'vue']);
 module.exports = {
 	extends: [
 		'eslint-config-airbnb-base',
-		'eslint-plugin-vue/lib/config/recommended',
+		'eslint-plugin-vue/lib/configs/recommended',
 	].map(require.resolve),
 
 	plugins: [
@@ -115,6 +115,8 @@ module.exports = {
 			ObjectPattern: {minProperties: 5, multiline: true, consistent: true},
 		}],
 
+		'implicit-arrow-linebreak': ['error', 'beside'],
+
 
 		'babel/generator-star-spacing': 0,
 		'babel/no-await-in-loop': 0,
@@ -180,5 +182,12 @@ module.exports = {
 		'vue/no-multi-spaces': ['error'],
 		'vue/v-bind-style': ['error', 'shorthand'],
 		'vue/v-on-style': ['error', 'shorthand'],
+		'vue/html-closing-bracket-spacing': ['error'],
+		'vue/html-closing-bracket-newline': 0,
+		'vue/script-indent': ['error', 'tab', {
+			baseIndent: 0,
+			switchCase: 0,
+			ignores: [],
+		}],
 	},
 };
