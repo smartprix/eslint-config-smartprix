@@ -113,6 +113,8 @@ module.exports = {
 		'object-curly-newline': ['error', {
 			ObjectExpression: {minProperties: 5, multiline: true, consistent: true},
 			ObjectPattern: {minProperties: 5, multiline: true, consistent: true},
+			ImportDeclaration: {minProperties: 5, multiline: true, consistent: true},
+			ExportDeclaration: {minProperties: 5, multiline: true, consistent: true},
 		}],
 
 		'implicit-arrow-linebreak': ['error', 'beside'],
@@ -187,7 +189,13 @@ module.exports = {
 		'vue/script-indent': ['error', 'tab', {
 			baseIndent: 0,
 			switchCase: 0,
-			ignores: [],
 		}],
+		'vue/html-indent': ['error', 'tab', {
+			attribute: 1,
+			closeBracket: 0,
+		}],
+		'vue/require-default-prop': 0,
+		'vue/require-prop-types': 0,
+		'vue/html-self-closing': 0,
 	},
 };
