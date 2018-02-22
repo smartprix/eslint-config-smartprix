@@ -19,7 +19,7 @@ module.exports = {
 
 	parserOptions: {
 		parser: require.resolve('babel-eslint'),
-		ecmaVersion: 2017,
+		ecmaVersion: 2018,
 		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true,
@@ -197,5 +197,11 @@ module.exports = {
 		'vue/require-default-prop': 0,
 		'vue/require-prop-types': 0,
 		'vue/html-self-closing': 0,
+
+		// disable these 3 rules temporarily, because they are causing parsing problems
+		// re-enable them later as they become correct
+		'import/no-named-as-default': 0,
+		'import/no-named-as-default-member': 0,
+		'import/export': 0,
 	},
 };
