@@ -28,18 +28,7 @@ module.exports = {
 	},
 
 	env: {
-		browser: true,
 		node: true,
-		commonjs: true,
-		jquery: true,
-	},
-
-	globals: {
-		d: false,
-		_: false,
-		moment: false,
-		cfg: false,
-		sm: false,
 	},
 
 	rules: {
