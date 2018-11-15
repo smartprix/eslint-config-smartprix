@@ -23,7 +23,6 @@ module.exports = {
 		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true,
-			experimentalObjectRestSpread: true,
 		},
 	},
 
@@ -110,7 +109,7 @@ module.exports = {
 
 		// don't require new line between single line class members
 		'lines-between-class-members': ["error", "always", {exceptAfterSingleLine: true}],
-		
+
 		'no-multiple-empty-lines': ["error", {max: 2, maxEOF: 1}],
 
 		'babel/generator-star-spacing': 0,
