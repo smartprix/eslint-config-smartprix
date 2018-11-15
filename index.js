@@ -108,6 +108,8 @@ module.exports = {
 
 		'implicit-arrow-linebreak': ['error', 'beside'],
 
+		// don't require new line between single line class members
+		'lines-between-class-members': ["error", "always", {exceptAfterSingleLine: true}],
 
 		'babel/generator-star-spacing': 0,
 		'babel/no-await-in-loop': 0,
